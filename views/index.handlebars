@@ -4,20 +4,10 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <div class=" container">
-                        {{!-- card title on left add meber btn right --}}
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3 class="card-title">{{title}}</h3>
-                            </div>
-                            <div class="col-md-6">
-                                {{!-- toogle modal  --}}
-                                <button type="button" data-bs-toggle="modal" class="btn btn-primary float-right" data-toggle="modal"
-                                    data-target="#addMemberModal">
-                                    Add Member
-                                </button>
-
-                            </div>
+                    {{!-- card title on left add meber btn right --}}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="card-title center">{{title}}</h3>
                         </div>
                     </div>
 
@@ -53,51 +43,43 @@
                             </tbody>
 
                         </table>
-
-
-
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-    
-    {{!-- add member modal --}}
-    <div class="modal fade" id="addMemberModal" tabindex="-1" role="dialog" aria-labelledby="addMemberModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addMemberModalLabel">Add Member</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+    {{!-- form inside card  --}}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                {{!-- ceneter card --}}
+                <div class="card-header text-center mt-5">
+                    <h3 class="card-title">Add Member</h3>
                 </div>
-                <div class="modal-body">
-                    <form action="/" method="POST">
+
+                <div class="card-body">
+                    <form action="/api/members" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                            <input type="text" class="form-control" id="name" name="name" value="{{name}}">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                            <input type="text" class="form-control" id="email" name="email" value="{{email}}">
                         </div>
+                        {{!-- status seelect option --}}
                         <div class="form-group">
                             <label for="status">Status</label>
                             <select class="form-control" id="status" name="status">
                                 <option value="active">Active</option>
                                 <option value="inactive">Inactive</option>
                             </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-block mt-5">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
-    {{!-- toggle modal --}}
-
+</div>
+{{!-- end of post for with bootstrap --}}
