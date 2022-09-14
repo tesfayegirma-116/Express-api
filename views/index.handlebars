@@ -1,5 +1,5 @@
 {{!-- post for with bootstrap --}}
-<div class="container mt-9">
+<div class="container mt-2">
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -34,9 +34,9 @@
                                     <td>{{email}}</td>
                                     <td>{{status}}</td>
                                     <td>
-                                        <a href="/members/{{id}}" class="btn btn-primary">View</a>
-                                        <a href="/members/{{id}}/edit" class="btn btn-warning">Edit</a>
-                                        <a href="/members/{{id}}/delete" class="btn btn-danger">Delete</a>
+                                        <a href="api/members/{{id}}" class="btn btn-primary">View</a>
+                                        <a href="api/members/{{id}}/edit" class="btn btn-warning">Edit</a>
+                                        <a href="api/members/{{id}}/delete" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                                 {{/each}}
@@ -75,7 +75,7 @@
                                 <option value="active">Active</option>
                                 <option value="inactive">Inactive</option>
                             </select>
-                        <button type="submit" class="btn btn-primary btn-block mt-5">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-block mt-4">Submit</button>
                     </form>
                 </div>
             </div>
